@@ -2,10 +2,10 @@
   "name": "skiff-icons",
   "version": "1.0.0",
   "description": "Simple SVG icon library for React applications",
-  "main": "index.js",
+  "main": "index.tsx",
   "types": "index.d.ts",
   "files": [
-    "index.js",
+    "index.tsx",
     "index.d.ts",
     "icons",
     "README.md",
