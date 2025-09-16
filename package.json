@@ -3,20 +3,7 @@
   "version": "1.0.0",
   "description": "A comprehensive icon library for React applications with 300+ icons",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./icons": {
-      "types": "./dist/icons.d.ts",
-      "import": "./dist/icons.mjs",
-      "require": "./dist/icons.js"
-    }
-  },
   "files": [
     "dist",
     "Icons",
@@ -24,9 +11,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "type-check": "tsc --noEmit",
+    "build": "tsc",
+    "dev": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -54,9 +40,9 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
+    "@types/node": "^18.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "tsup": "^6.5.0",
     "typescript": "^4.9.0"
   },
   "engines": {

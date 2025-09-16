@@ -1,0 +1,58 @@
+# Source files (not needed in npm package)
+Icons/assets/*.svg
+Icons/Icons.constants.ts
+Icons/Icons.tsx
+Icons/Icons.types.ts
+Icons/Icons.utils.ts
+Icons/icons.ts
+Icons/index.ts
+
+# Development files
+tsup.config.ts
+tsconfig.json
+.gitignore
+
+# Git and development
+.git/
+.github/
+
+# Development dependencies and files
+node_modules/
+*.log
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Documentation and examples (if any)
+examples/
+docs/
+
+# Test files
+*.test.ts
+*.test.tsx
+__tests__/
+coverage/
+
+# Build artifacts that shouldn't be in npm
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

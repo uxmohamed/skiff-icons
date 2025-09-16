@@ -17,17 +17,23 @@ const SimpleTooltip: React.FC<{
   delay?: number;
 }> = ({ content, children, delay = 0 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
-  const [timeoutId, setTimeoutId] = React.useState<NodeJS.Timeout | null>(null);
+  const timeoutRef = React.useRef<number | null>(null);
 
   const showTooltip = () => {
-    if (timeoutId) clearTimeout(timeoutId);
-    setTimeoutId(setTimeout(() => setIsVisible(true), delay));
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(() => setIsVisible(true), delay);
   };
 
   const hideTooltip = () => {
-    if (timeoutId) clearTimeout(timeoutId);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsVisible(false);
   };
+
+  React.useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <div
@@ -94,13 +100,6 @@ const Icons: React.FC<IconProps> = ({
     opacity: disabled ? 0.5 : 1,
   };
 
-  const svgStyle: React.CSSProperties = {
-    width: iconSize,
-    height: iconSize,
-    fill: iconColor,
-    transition: 'fill 0.1s ease',
-  };
-
   const IconElement = (
     <div
       className="sk-icon-container"
@@ -108,7 +107,12 @@ const Icons: React.FC<IconProps> = ({
       style={containerStyle}
       onClick={disabled ? undefined : onClick}
     >
-      <IconSVG style={svgStyle} />
+      <IconSVG
+        width={iconSize}
+        height={iconSize}
+        fill={iconColor}
+        style={{ transition: 'fill 0.1s ease' }}
+      />
     </div>
   );
 

@@ -325,7 +325,7 @@ export const ICON_COLOR: Record<IconColor, string> = {
   source: ''
 };
 
-export const ICON_SVG: Record<Icon, string> = {
+export const ICON_SVG: Record<Icon, React.FC<React.SVGProps<SVGSVGElement>>> = {
   archive: ARCHIVE_SVG,
   at: AT_SVG,
   apple: APPLE_SVG,

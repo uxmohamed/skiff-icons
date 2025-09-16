@@ -1,25 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "target": "ES2018",
+    "lib": ["ES2018", "DOM"],
+    "module": "CommonJS",
     "moduleResolution": "node",
     "declaration": true,
-    "declarationMap": true,
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
-    "isolatedModules": true,
-    "noEmit": false,
-    "emitDeclarationOnly": false
+    "jsx": "react",
+    "types": ["node"]
   },
   "include": [
-    "Icons/**/*"
+    "Icons/**/*",
+    "custom.d.ts"
   ],
   "exclude": [
     "node_modules",
