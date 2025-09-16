@@ -1,49 +1,41 @@
 {
   "name": "skiff-icons",
   "version": "1.0.0",
-  "description": "A comprehensive icon library for React applications with 300+ icons",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "Simple SVG icon library for React applications",
+  "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "dist",
-    "Icons",
+    "index.js",
+    "index.d.ts",
+    "icons",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "echo 'Ready to publish'"
   },
   "keywords": [
     "icons",
+    "skiff",
     "react",
-    "svg",
-    "ui",
-    "components",
-    "typescript",
-    "design-system",
-    "icon-library"
+    "icon-library",
+    "svg"
   ],
   "author": "Skiff",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skiff-org/skiff-icons.git"
+    "url": "https://github.com/uxmohamed/skiff-icons.git"
   },
   "bugs": {
-    "url": "https://github.com/skiff-org/skiff-icons/issues"
+    "url": "https://github.com/uxmohamed/skiff-icons/issues"
   },
-  "homepage": "https://github.com/skiff-org/skiff-icons#readme",
+  "homepage": "https://github.com/uxmohamed/skiff-icons",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "typescript": "^4.9.0"
+    "@types/react": "^18.0.0"
   },
   "engines": {
     "node": ">=14.0.0"
